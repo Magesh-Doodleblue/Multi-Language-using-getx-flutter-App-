@@ -58,7 +58,12 @@ class _loginBodyWidgetState extends State<loginBodyWidget> {
     Get.updateLocale(locale);
   }
 
-  void showLanguageDialog() {
+  malayalamLanguageChange() {
+    var locale = const Locale('ml', 'IN');
+    Get.updateLocale(locale);
+  }
+
+  void showLanguageDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -82,6 +87,10 @@ class _loginBodyWidgetState extends State<loginBodyWidget> {
                   onPressed: hindiLanguageChange,
                   child: const Text('Hindi'),
                 ),
+                TextButton(
+                  onPressed: malayalamLanguageChange,
+                  child: const Text('Malayalam'),
+                ),
               ],
             ),
           ],
@@ -97,7 +106,10 @@ class _loginBodyWidgetState extends State<loginBodyWidget> {
         title: Text("Language App".tr),
         actions: [
           GestureDetector(
-              onTap: showLanguageDialog, child: const Icon(Icons.language)),
+              onTap: () {
+                showLanguageDialog(context);
+              },
+              child: const Icon(Icons.language)),
           const SizedBox(
             width: 20,
           )
@@ -114,11 +126,14 @@ class _loginBodyWidgetState extends State<loginBodyWidget> {
             ),
             child: Column(
               children: [
-                Image.network(
-                  "https://static.vecteezy.com/system/resources/previews/005/879/539/original/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cloud-storage-for-uploading-and-processing-files-illustration-with-isolated-people-scene-free-vector.jpg",
-                  width: 330,
-                  height: 300,
-                  fit: BoxFit.cover,
+                Hero(
+                  tag: "imagehero",
+                  child: Image.network(
+                    "https://static.vecteezy.com/system/resources/previews/005/879/539/original/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cloud-storage-for-uploading-and-processing-files-illustration-with-isolated-people-scene-free-vector.jpg",
+                    width: 330,
+                    height: 300,
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 const SizedBox(
                   height: 20,

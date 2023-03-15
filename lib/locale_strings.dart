@@ -36,5 +36,16 @@ class LocaleStrings extends Translations {
           'Language App': 'மொழி பயன்பாடு',
           "Homepage": "முகப்பு பக்கம்"
         },
+        'ml_IN': {
+          //Malayalam
+          'hello world': 'ഹലോ വേൾഡ്',
+          'message': '"എന്റെ ആപ്പിലേക്ക് സ്വാഗതം"',
+          'continue': "തുടരുക",
+          'welcome': 'സ്വാഗതം',
+          'Enter Mail iD': 'മെയിൽ ഐഡി നൽകുക',
+          "Enter password": "പാസ്വേഡ് നല്കൂ",
+          'Language App': "ഭാഷാ ആപ്പ്",
+          "Homepage": "ഹോംപേജ്"
+        },
       };
 }

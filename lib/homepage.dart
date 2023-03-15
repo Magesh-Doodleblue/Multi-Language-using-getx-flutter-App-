@@ -16,9 +16,14 @@ class HomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const FlutterLogo(
-            style: FlutterLogoStyle.stacked,
-            size: 200,
+          Hero(
+            tag: "imagehero",
+            child: Image.network(
+              "https://static.vecteezy.com/system/resources/previews/005/879/539/original/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cloud-storage-for-uploading-and-processing-files-illustration-with-isolated-people-scene-free-vector.jpg",
+              width: 200,
+              height: 200,
+              fit: BoxFit.cover,
+            ),
           ),
           const SizedBox(
             height: 70,
