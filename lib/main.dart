@@ -63,6 +63,11 @@ class _loginBodyWidgetState extends State<loginBodyWidget> {
     Get.updateLocale(locale);
   }
 
+  russianLanguageChange() {
+    var locale = const Locale('ru', 'RU');
+    Get.updateLocale(locale);
+  }
+
   void showLanguageDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -90,6 +95,10 @@ class _loginBodyWidgetState extends State<loginBodyWidget> {
                 TextButton(
                   onPressed: malayalamLanguageChange,
                   child: const Text('Malayalam'),
+                ),
+                TextButton(
+                  onPressed: russianLanguageChange,
+                  child: const Text('Russian'),
                 ),
               ],
             ),

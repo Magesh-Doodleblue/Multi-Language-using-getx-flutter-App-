@@ -33,48 +33,42 @@ class HomePage extends StatelessWidget {
               children: [
                 Text(
                   "Enter password".tr,
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                  style: textStyleWidger(),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
                   'hello world'.tr,
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                  style: textStyleWidger(),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
                   'message'.tr,
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                  style: textStyleWidger(),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
                   'continue'.tr,
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                  style: textStyleWidger(),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
                   'welcome'.tr,
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                  style: textStyleWidger(),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
                   "Enter password".tr,
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
+                  style: textStyleWidger(),
                 ),
                 const SizedBox(
                   height: 10,
@@ -85,5 +79,9 @@ class HomePage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  TextStyle textStyleWidger() {
+    return const TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   }
 }

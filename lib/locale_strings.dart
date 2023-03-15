@@ -39,13 +39,24 @@ class LocaleStrings extends Translations {
         'ml_IN': {
           //Malayalam
           'hello world': 'ഹലോ വേൾഡ്',
-          'message': '"എന്റെ ആപ്പിലേക്ക് സ്വാഗതം"',
+          'message': 'എന്റെ ആപ്പിലേക്ക് സ്വാഗതം',
           'continue': "തുടരുക",
           'welcome': 'സ്വാഗതം',
           'Enter Mail iD': 'മെയിൽ ഐഡി നൽകുക',
           "Enter password": "പാസ്വേഡ് നല്കൂ",
           'Language App': "ഭാഷാ ആപ്പ്",
           "Homepage": "ഹോംപേജ്"
+        },
+        'ru_RU': {
+          //Russian
+          'hello world': 'Привет, мир',
+          'message': 'сообщение',
+          'continue': "продолжать",
+          'welcome': 'добро пожаловать',
+          'Enter Mail iD': 'введите почтовый идентификатор',
+          "Enter password": "введите пароль",
+          'Language App': "Языковое приложение",
+          "Homepage": "домашняя страница"
         },
       };
 }
