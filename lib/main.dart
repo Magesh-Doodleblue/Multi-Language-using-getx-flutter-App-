@@ -42,30 +42,57 @@ class loginBodyWidget extends StatefulWidget {
 class _loginBodyWidgetState extends State<loginBodyWidget> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
+  late var image = "";
+  final koreanImage =
+      "https://i0.wp.com/www.travelworldheritage.com/wp-content/uploads/2014/05/EIGHTEEN.png";
+  final englishImage =
+      "https://st2.depositphotos.com/3591429/5246/i/950/depositphotos_52462701-stock-photo-people-and-english-concept.jpg";
 
+  final tamilImage =
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Word_Tamil.svg/800px-Word_Tamil.svg.png";
+
+  final malayalamImage =
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Word_Malayalam.svg/1200px-Word_Malayalam.svg.png";
+  final hindiImage =
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTQc_GwoFZsq2MstOEvRipq8FCFEqqfXJbLjzL42Iq&s";
+  final russianImage =
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOAlHNFIsomxL1792XrID1lqmE4WNnXMUbk2VCXWgjzw&s";
+//
+//
   tamilLanguageChange() {
     var locale = const Locale('ta', 'IN');
     Get.updateLocale(locale);
+    image = tamilImage;
   }
 
   englishLanguageChange() {
     var locale = const Locale('en', 'IN');
     Get.updateLocale(locale);
+    image = englishImage;
   }
 
   hindiLanguageChange() {
     var locale = const Locale('hi', 'IN');
     Get.updateLocale(locale);
+    image = hindiImage;
   }
 
   malayalamLanguageChange() {
     var locale = const Locale('ml', 'IN');
     Get.updateLocale(locale);
+    image = malayalamImage;
   }
 
   russianLanguageChange() {
     var locale = const Locale('ru', 'RU');
     Get.updateLocale(locale);
+    image = russianImage;
+  }
+
+  koreanLanguageChange() {
+    var locale = const Locale('kr', 'KR');
+    Get.updateLocale(locale);
+    image = koreanImage;
   }
 
   void showLanguageDialog(BuildContext context) {
@@ -76,31 +103,37 @@ class _loginBodyWidgetState extends State<loginBodyWidget> {
           title: const Text('Please select the Language'),
           content: const Text('Here are the available languages'),
           actions: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              // mainAxisSize: MainAxisSize.min,
-              children: [
-                TextButton(
-                  onPressed: tamilLanguageChange,
-                  child: const Text('Tamil'),
-                ),
-                TextButton(
-                  onPressed: englishLanguageChange,
-                  child: const Text('English'),
-                ),
-                TextButton(
-                  onPressed: hindiLanguageChange,
-                  child: const Text('Hindi'),
-                ),
-                TextButton(
-                  onPressed: malayalamLanguageChange,
-                  child: const Text('Malayalam'),
-                ),
-                TextButton(
-                  onPressed: russianLanguageChange,
-                  child: const Text('Russian'),
-                ),
-              ],
+            Center(
+              child: Wrap(
+                spacing: 16,
+                // runSpacing: 8,
+                children: [
+                  TextButton(
+                    onPressed: tamilLanguageChange,
+                    child: const Text('Tamil'),
+                  ),
+                  TextButton(
+                    onPressed: englishLanguageChange,
+                    child: const Text('English'),
+                  ),
+                  TextButton(
+                    onPressed: hindiLanguageChange,
+                    child: const Text('Hindi'),
+                  ),
+                  TextButton(
+                    onPressed: malayalamLanguageChange,
+                    child: const Text('Malayalam'),
+                  ),
+                  TextButton(
+                    onPressed: russianLanguageChange,
+                    child: const Text('Russian'),
+                  ),
+                  TextButton(
+                    onPressed: koreanLanguageChange,
+                    child: const Text('Korean'),
+                  ),
+                ],
+              ),
             ),
           ],
         );
@@ -135,15 +168,21 @@ class _loginBodyWidgetState extends State<loginBodyWidget> {
             ),
             child: Column(
               children: [
-                Hero(
-                  tag: "imagehero",
-                  child: Image.network(
-                    "https://static.vecteezy.com/system/resources/previews/005/879/539/original/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cloud-storage-for-uploading-and-processing-files-illustration-with-isolated-people-scene-free-vector.jpg",
-                    width: 330,
-                    height: 300,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+                image == ""
+                    ? Hero(
+                        tag: "imagehero",
+                        child: Image.network(
+                            "https://static.vecteezy.com/system/resources/previews/005/879/539/original/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cloud-storage-for-uploading-and-processing-files-illustration-with-isolated-people-scene-free-vector.jpg"),
+                      )
+                    : Hero(
+                        tag: "imagehero",
+                        child: Image.network(
+                          image,
+                          width: 330,
+                          height: 300,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
                 const SizedBox(
                   height: 20,
                 ),

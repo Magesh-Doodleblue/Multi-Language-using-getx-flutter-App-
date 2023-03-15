@@ -58,5 +58,16 @@ class LocaleStrings extends Translations {
           'Language App': "Языковое приложение",
           "Homepage": "домашняя страница"
         },
+        'kr_KR': {
+          //Russian
+          'hello world': '안녕하세요 세계',
+          'message': '메시지',
+          'continue': "계속하다",
+          'welcome': '환영',
+          'Enter Mail iD': '메일 아이디 입력',
+          "Enter password": "암호를 입력",
+          'Language App': "언어 앱",
+          "Homepage": "홈페이지"
+        },
       };
 }

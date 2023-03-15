@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'calendar_time.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -75,7 +77,17 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          OutlinedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CalendarTime(),
+                  ),
+                );
+              },
+              child: const Text("Calendar Time"))
         ],
       ),
     );
