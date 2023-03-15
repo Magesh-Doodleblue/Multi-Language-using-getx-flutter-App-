@@ -9,7 +9,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Homepage".tr)),
+      appBar: AppBar(
+        title: Text("Homepage".tr),
+        centerTitle: true,
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: const [
+          FlutterLogo(
+            style: FlutterLogoStyle.stacked,
+            size: 200,
+          ),
+        ],
+      ),
     );
   }
 }
