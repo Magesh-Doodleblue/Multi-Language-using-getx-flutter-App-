@@ -9,7 +9,7 @@ class LocaleStrings extends Translations {
           'message': 'welcome to my app',
           'continue': 'Continue',
           'welcome': 'Welcome',
-          'Enter Mail iD': 'Mail iD ஐ உள்ளிடவும்',
+          'Enter Mail iD': 'Enter your mail id',
           'Language App': 'Language App',
           "Enter password": ' Enter Password',
           "Homepage": "Home Page"
